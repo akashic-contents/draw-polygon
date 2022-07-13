@@ -48,7 +48,7 @@ function main(): void {
 		assetIds: []
 	});
 
-	scene.onLoad.add(function() {
+	scene.onLoad.add(() => {
 		/** タッチ座標 */
 		let touchVertices: box2d.Box2DWeb.Common.Math.b2Vec2[] = [];
 		/** 描画途中の線リスト */
@@ -101,7 +101,7 @@ function main(): void {
 			}
 		});
 
-		scene.onUpdate.add(function() {
+		scene.onUpdate.add(() => {
 			// 物理エンジンの世界をすすめる
 			// ※ step関数の引数は秒数なので、1フレーム分の時間（1.0 / g.game.fps）を指定する
 			physics.step(1.0 / g.game.fps);
